@@ -70,28 +70,28 @@
   
       <!-- Tableau des matériels -->
       <div class="table-container">
-        <table class="table is-striped is-hoverable">
+        <table class="table is-striped is-hoverable is-fullwidth">
           <thead>
             <tr>
               <th>ID</th>
-              <th>État</th>
               <th>Nom</th>
-              <th>Photo</th>
               <th>Référence</th>
               <th>Version</th>
+              <th>État</th>
+              <th>Photo</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="item in materials" :key="item.id">
               <td>{{ item.id }}</td>
-              <td>{{ item.etat }}</td>
               <td>{{ item.nom }}</td>
+              <td>{{ item.ref }}</td>
+              <td>{{ item.version }}</td>
+              <td>{{ item.etat }}</td>
               <td>
                 <img :src="item.photo" alt="Photo" width="50" height="50" />
               </td>
-              <td>{{ item.ref }}</td>
-              <td>{{ item.version }}</td>
               <td>
                 <button class="button is-danger is-small" @click="deleteMaterial(item.id)">
                   🗑️
@@ -182,8 +182,14 @@
   .container {
     margin-top: 20px;
   }
+  
   .table-container {
     margin-top: 40px;
+  }
+  
+  /* Étendre le tableau sur toute la largeur */
+  .table.is-fullwidth {
+    width: 100%;
   }
   </style>
   
