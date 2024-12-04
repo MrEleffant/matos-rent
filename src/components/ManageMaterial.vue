@@ -5,40 +5,18 @@
       <!-- Formulaire pour ajouter un matériel -->
       <div class="box">
         <form @submit.prevent="addMaterial">
-          <div class="field">
-            <label class="label">État</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                v-model="material.etat"
-                placeholder="État du matériel"
-              />
+            <div class="field">
+              <label class="label">Nom</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  v-model="material.nom"
+                  placeholder="Nom du matériel"
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label class="label">Nom</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                v-model="material.nom"
-                placeholder="Nom du matériel"
-              />
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Photo (URL)</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                v-model="material.photo"
-                placeholder="URL de la photo"
-              />
-            </div>
-          </div>
-          <div class="field">
+            <div class="field">
             <label class="label">Référence</label>
             <div class="control">
               <input
@@ -60,6 +38,29 @@
               />
             </div>
           </div>
+          <div class="field">
+            <label class="label">État</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                v-model="material.etat"
+                placeholder="État du matériel"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Photo (URL)</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                v-model="material.photo"
+                placeholder="URL de la photo"
+              />
+            </div>
+          </div>
+          
           <div class="field">
             <div class="control">
               <button class="button is-primary" type="submit">Ajouter Matériel</button>
@@ -84,10 +85,10 @@
           </thead>
           <tbody>
             <tr v-for="item in materials" :key="item.id">
-              <td>{{ item.id }}</td>
-              <td>{{ item.nom }}</td>
-              <td>{{ item.ref }}</td>
-              <td>{{ item.version }}</td>
+                <td>{{ item.id }}</td>
+                <td>{{ item.nom }}</td>
+                <td>{{ item.ref }}</td>
+                <td>{{ item.version }}</td>
               <td>{{ item.etat }}</td>
               <td>
                 <img :src="item.photo" alt="Photo" width="50" height="50" />
@@ -112,11 +113,11 @@
     data() {
       return {
         material: {
-          etat: "",
-          nom: "",
-          photo: "",
-          ref: "",
-          version: "",
+            nom: "",    
+            ref: "",
+            version: "",
+            etat: "",
+            photo: "",
         },
         materials: [], // Liste des matériels
       };
@@ -132,11 +133,11 @@
         try {
           // Ajouter un document dans la collection "Materiel"
           await addDoc(collection(db, "Materiel"), {
+              nom: this.material.nom,
+              ref: this.material.ref,
+              version: this.material.version,
             etat: this.material.etat,
-            nom: this.material.nom,
             photo: this.material.photo,
-            ref: this.material.ref,
-            version: this.material.version,
           });
   
           // Réinitialiser le formulaire
