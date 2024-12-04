@@ -1,9 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import AddMessage from "../components/AddMessage.vue";
+// import AddMessage from "../components/AddMessage.vue";
 import ViewMessages from "../components/ViewMessages.vue";
+import ManageMaterial from "../components/ManageMaterial.vue";
+
 
 const routes = [
-  { path: "/", component: AddMessage },
+  { path: "/", component: ManageMaterial },
+  { path: "/manage-material", component: ManageMaterial },
   { path: "/view", component: ViewMessages },
 ];
 
