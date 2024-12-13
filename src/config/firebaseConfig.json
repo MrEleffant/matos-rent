@@ -1,9 +1,9 @@
 {
-    "apiKey": "",
-    "authDomain": "",
-    "projectId": "",
-    "storageBucket": "",
-    "messagingSenderId": "",
-    "appId": "",
-    "measurementId": ""
+    "apiKey": "AIzaSyAPfP4G4kUqsRY6vfYffrNBZuV4nNoK4e8",
+    "authDomain": "test-et-secu.firebaseapp.com",
+    "projectId": "test-et-secu",
+    "storageBucket": "test-et-secu.firebasestorage.app",
+    "messagingSenderId": "506128176889",
+    "appId": "1:506128176889:web:a270a259e9c8560d8b3428",
+    "measurementId": "G-RSCETKLBWQ"
 }

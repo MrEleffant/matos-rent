@@ -1,21 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router";
-// import AddMessage from "../components/AddMessage.vue";
-import Accueil from "@/components/Accueil.vue";
-import ManageMaterial from "@/components/ManageMaterial.vue";
-import ManageUser from "@/components/ManageUser.vue";
+import Materiels from "@/components/Materiels.vue";
+import ViewDetails from "@/components/ViewDetails.vue";
+import Auth from "@/components/Auth.vue";
+import ManageUsers from "@/components/ManageUsers.vue";
 import EditUser from "@/components/EditUser.vue";
-import EditMaterial from "@/components/EditMaterial.vue";
-
-
 
 
 const routes = [
-  { path: "/", component: Accueil },
-  { path: "/manage-material", component: ManageMaterial },
-  { path: "/manage-user", component: ManageUser },
-  { path: "/edit/:id", name: "EditUser", component: EditUser },
-  { path: "/edit-material/:id", name: "EditMaterial", component: EditMaterial },
-
+  {
+    path: "/",
+    name: "Materiels",
+    component: Materiels,
+  },
+  {
+    path: "/details/:id",
+    name: "ViewDetails",
+    component: ViewDetails,
+  },
+  {
+    path: "/manage-users",
+    name: "ManageUsers",
+    component: ManageUsers,
+  },
+  {
+    path: "/edit-user/:id",
+    name: "EditUser",
+    component: EditUser,
+  },
+  {
+    path: "/auth",
+    name: "Auth",
+    component: Auth,
+  },
 ];
 
 const router = createRouter({
