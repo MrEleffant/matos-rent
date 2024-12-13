@@ -97,6 +97,9 @@
                 <button class="button is-danger is-small" @click="deleteMaterial(item.id)">
                   🗑️
                 </button>
+                <button class="button is-info is-small" @click="goToEditMaterial(item.id)">
+                  ✏️
+                </button>
               </td>
             </tr>
           </tbody>
@@ -163,6 +166,10 @@
         } catch (error) {
           console.error("Erreur lors de la suppression :", error);
         }
+      },
+
+      goToEditMaterial(id) {
+        this.$router.push({ name: "EditMaterial", params: { id } });
       },
     },
     mounted() {
