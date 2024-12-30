@@ -3,7 +3,7 @@
     <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item">Materiels</router-link>
-        <router-link v-if="user?.value" to="/manage-reservations" class="navbar-item">Réservations</router-link>
+        <router-link v-if="user?.data?.role === 'admin'" to="/manage-reservations" class="navbar-item">Réservations</router-link>
         <router-link v-if="user?.data?.role === 'admin'" to="/manage-users" class="navbar-item">Utilisateurs</router-link>
         
       </div>
