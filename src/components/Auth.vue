@@ -3,7 +3,7 @@
     <section class="section">
       <div class="columns is-centered">
         <div class="column is-half">
-          <h1 class="title">Authentication Example</h1>
+          <h1 class="title has-text-centered">Authentication</h1>
           <form @submit.prevent="login" class="box">
             <div class="field">
               <label class="label" for="email">Email:</label>

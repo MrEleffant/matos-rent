@@ -4,6 +4,9 @@ import ViewDetails from "@/components/ViewDetails.vue";
 import Auth from "@/components/Auth.vue";
 import ManageUsers from "@/components/ManageUsers.vue";
 import EditUser from "@/components/EditUser.vue";
+import EditMaterial from "@/components/EditMaterial.vue";
+import ReserveMaterial from "@/components/ReserveMaterial.vue";
+import ManageReservations from "@/components/ManageReservations.vue";
 
 
 const routes = [
@@ -11,6 +14,11 @@ const routes = [
     path: "/",
     name: "Materiels",
     component: Materiels,
+  },
+  {
+    path: "/edit-material/:id",
+    name: "EditMaterial",
+    component: EditMaterial,
   },
   {
     path: "/details/:id",
@@ -31,6 +39,16 @@ const routes = [
     path: "/auth",
     name: "Auth",
     component: Auth,
+  },
+  {
+    path: "/reserve-material/:id",
+    name: "ReserveMaterial",
+    component: ReserveMaterial,
+  },
+  {
+    path: "/manage-reservations",
+    name: "ManageReservations",
+    component: ManageReservations,
   },
 ];
 

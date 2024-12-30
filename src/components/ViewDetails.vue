@@ -3,7 +3,7 @@
       <h1 class="title">Détails du Matériel</h1>
       <div v-if="material">
         <p><strong>Nom :</strong> {{ material.nom }}</p>
-        <p><strong>Référence :</strong> {{ material.ref }}</p>
+        <p><strong>Référence :</strong> {{ material.reference }}</p>
         <p><strong>Version :</strong> {{ material.version }}</p>
         <p><strong>État :</strong> {{ material.etat }}</p>
         <p><strong>Photo :</strong></p>

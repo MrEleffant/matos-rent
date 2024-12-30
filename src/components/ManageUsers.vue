@@ -11,7 +11,7 @@
             <input
               class="input"
               type="text"
-              v-model="user.nom"
+              v-model="newUser.nom"
               placeholder="Nom de l'utilisateur"
             />
           </div>
@@ -22,7 +22,7 @@
             <input
               class="input"
               type="text"
-              v-model="user.prenom"
+              v-model="newUser.prenom"
               placeholder="Prénom de l'utilisateur"
             />
           </div>
@@ -33,7 +33,7 @@
             <input
               class="input"
               type="email"
-              v-model="user.mail"
+              v-model="newUser.mail"
               placeholder="Email de l'utilisateur"
             />
           </div>
@@ -44,7 +44,7 @@
             <input
               class="input"
               type="text"
-              v-model="user.matricule"
+              v-model="newUser.matricule"
               placeholder="Matricule de l'utilisateur"
             />
           </div>
@@ -55,7 +55,7 @@
             <input
               class="input"
               type="password"
-              v-model="user.password"
+              v-model="newUser.password"
               placeholder="Mot de passe de l'utilisateur"
             />
           </div>
@@ -64,11 +64,11 @@
           <label class="label">Rôle</label>
           <div class="control">
             <label class="radio">
-              <input type="radio" v-model="user.role" value="admin" />
+              <input type="radio" v-model="newUser.role" value="admin" />
               Admin
             </label>
             <label class="radio">
-              <input type="radio" v-model="user.role" value="emprunteur" />
+              <input type="radio" v-model="newUser.role" value="emprunteur" />
               Emprunteur
             </label>
           </div>
@@ -104,18 +104,18 @@
             <td>{{ user.matricule }}</td>
             <td>{{ user.role }}</td>
             <td>
-              <button
-                class="button is-danger is-small"
-                @click="deleteUser(user.id)"
-              >
-                🗑️
-              </button>
               <router-link
-                :to="{ name: 'EditUser', params: { id: user.id } }"
-                class="button is-info is-small"
+              :to="{ name: 'EditUser', params: { id: user.id } }"
+              class="button is-info is-small"
               >
-                ✏️
-              </router-link>
+              ✏️
+            </router-link>
+            <button
+              class="button is-danger is-small"
+              @click="deleteUser(user.id)"
+            >
+              🗑️
+            </button>
             </td>
           </tr>
         </tbody>
@@ -126,13 +126,14 @@
 
 <script>
 import { collection, doc, onSnapshot, deleteDoc, setDoc } from "firebase/firestore";
+import { useUserStore } from '@/stores/userStore';
 import { db } from "../firebase";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export default {
   data() {
     return {
-      user: {
+      newUser: {
         nom: "",
         prenom: "",
         mail: "",
@@ -143,9 +144,15 @@ export default {
       users: [],
     };
   },
+  computed: {
+    currentUser() {
+      const userStore = useUserStore();
+      return userStore.user;
+    },
+  },
   methods: {
     async addUser() {
-      if (!this.user.nom.trim() || !this.user.prenom.trim()) {
+      if (!this.newUser.nom.trim() || !this.newUser.prenom.trim()) {
         alert("Les champs 'Nom' et 'Prénom' sont obligatoires !");
         return;
       }
@@ -154,21 +161,21 @@ export default {
         const auth = getAuth();
         const userCredential = await createUserWithEmailAndPassword(
           auth,
-          this.user.mail,
-          this.user.password
+          this.newUser.mail,
+          this.newUser.password
         );
 
         const uid = userCredential.user.uid;
 
         await setDoc(doc(db, "Utilisateurs", uid), {
-          nom: this.user.nom,
-          prenom: this.user.prenom,
-          mail: this.user.mail,
-          matricule: this.user.matricule,
-          role: this.user.role,
+          nom: this.newUser.nom,
+          prenom: this.newUser.prenom,
+          mail: this.newUser.mail,
+          matricule: this.newUser.matricule,
+          role: this.newUser.role,
         });
 
-        this.user = {
+        this.newUser = {
           nom: "",
           prenom: "",
           mail: "",
