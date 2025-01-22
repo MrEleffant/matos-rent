@@ -10,8 +10,6 @@
   <img alt="Nbr languages" src="https://img.shields.io/github/languages/count/MrEleffant/test-et-secu?color=56BEB8">
 
   <img alt="Taille repo" src="https://img.shields.io/github/repo-size/MrEleffant/test-et-secu?color=56BEB8">
-
-  <img alt="License" src="https://img.shields.io/github/license/MrEleffant/test-et-secu?color=56BEB8">
 </p>
 
 <hr>
@@ -23,7 +21,7 @@
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/Inserer-Pseudo" target="_blank">Author</a>
+  <a href="https://github.com/Inserer-Pseudo" target="_blank">Authors</a>
 </p>
 
 <br>
@@ -37,7 +35,8 @@ Matos-Rent est LE logiciel de location de matériel informatique, sa simplicité
 :heavy_check_mark: Gestion du matériel informatique\
 :heavy_check_mark: Gestion des utilisateurs\
 :heavy_check_mark: Gestion des reservations\
-:heavy_check_mark: Interface intuitive et soignée
+:heavy_check_mark: Interface intuitive et soignée\
+:x: Tous les messages d'erreur
 
 ## :rocket: Technologies ##
 
@@ -58,8 +57,6 @@ Avant de commencer :checkered_flag:, assurez-vous d'avoir :
 ## :checkered_flag: Starting ##
 
 ```bash
-# Cloner le projet
-
 # Initialiser le projet
 $ npm install
 
@@ -72,6 +69,9 @@ $ npm run build
 # Lints et correction de fichiers
 $ npm run lint
 
+# Lancer les tests automatisés
+$ npm run serve & npx cypress open
+
 # Customiser la configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
@@ -79,12 +79,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## :memo: License ##
 
-Ce projet est sous licence POLYTECH. Pour plus d'infos, voir : [LICENSE](LICENSE.md)
+Ce projet est sous licence POLYTECH. Pour plus d'infos, se renseigner auprès de Polytech.
 
-
-Fait avec :heart: par <a href="https://github.com/Inserer-Pseudo" target="_blank">Thibaut & Mathis & Benjamin & Maël</a>
+Fait avec :heart: par <a href="https://github.com/Inserer-Pseudo" target="_blank">Thibaut & Mathis & Benjamin</a>
 &#xa0;
 
 <a href="#top">Retour en haut</a>
-
-
