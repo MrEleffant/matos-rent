@@ -1,11 +1,15 @@
+<div align="center" id="top"> 
+  <img src="./logo.jpg" alt="Matos-Rent" />
+  &#xa0;
+</div>
 <h1 align="center">Matos-Rent</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/MrEleffant/test-et-secu?color=56BEB8">
+  <img alt="Language primaire" src="https://img.shields.io/github/languages/top/MrEleffant/test-et-secu?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/MrEleffant/test-et-secu?color=56BEB8">
+  <img alt="Nbr languages" src="https://img.shields.io/github/languages/count/MrEleffant/test-et-secu?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/MrEleffant/test-et-secu?color=56BEB8">
+  <img alt="Taille repo" src="https://img.shields.io/github/repo-size/MrEleffant/test-et-secu?color=56BEB8">
 
   <img alt="License" src="https://img.shields.io/github/license/MrEleffant/test-et-secu?color=56BEB8">
 </p>
@@ -37,8 +41,7 @@ Matos-Rent est LE logiciel de location de matériel informatique, sa simplicité
 
 ## :rocket: Technologies ##
 
-The following tools were used in this project:
-
+Les technologies suivantes ont été utilisées :
 - [VueJS](https://vuejs.org/)
 - [Firebase](https://firebase.google.com/)
 - [Bulma](https://bulma.io/)
@@ -48,40 +51,40 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have :
+Avant de commencer :checkered_flag:, assurez-vous d'avoir :
 - [Git](https://git-scm.com)
-- A working VueJS development environnement
+- Un environnement de developpement VueJS fonctionnel
 
 ## :checkered_flag: Starting ##
 
 ```bash
-# Clone this project
+# Cloner le projet
 
-## Project setup
+# Initialiser le projet
 $ npm install
 
-### Compiles and hot-reloads for development
+# Compiler pour le developpement (rafraichissment à chaud)
 $ npm run serve
 
-### Compiles and minifies for production
+# Compiler et réduire pour le déploiemennt
 $ npm run build
 
-### Lints and fixes files
+# Lints et correction de fichiers
 $ npm run lint
 
-### Customize configuration
+# Customiser la configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 
 
 ## :memo: License ##
 
-This project is under license from POLYTECH. For more details, see the [LICENSE](LICENSE.md) file.
+Ce projet est sous licence POLYTECH. Pour plus d'infos, voir : [LICENSE](LICENSE.md)
 
 
-Made with :heart: by <a href="https://github.com/Inserer-Pseudo" target="_blank">Thibaut & Mathis & Benjamin & Maël</a>
+Fait avec :heart: par <a href="https://github.com/Inserer-Pseudo" target="_blank">Thibaut & Mathis & Benjamin & Maël</a>
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Retour en haut</a>
 
 
