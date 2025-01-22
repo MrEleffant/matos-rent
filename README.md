@@ -1,24 +1,90 @@
-# matos-rent
+<div align="center" id="top"> 
+  <img src="./logo.jpg" alt="Matos-Rent" />
+  &#xa0;
+</div>
+<h1 align="center">Matos-Rent</h1>
 
-## Project setup
-```
-npm install
-```
+<p align="center">
+  <img alt="Language primaire" src="https://img.shields.io/github/languages/top/MrEleffant/test-et-secu?color=56BEB8">
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+  <img alt="Nbr languages" src="https://img.shields.io/github/languages/count/MrEleffant/test-et-secu?color=56BEB8">
 
-### Compiles and minifies for production
-```
-npm run build
-```
+  <img alt="Taille repo" src="https://img.shields.io/github/repo-size/MrEleffant/test-et-secu?color=56BEB8">
 
-### Lints and fixes files
-```
-npm run lint
-```
+  <img alt="License" src="https://img.shields.io/github/license/MrEleffant/test-et-secu?color=56BEB8">
+</p>
 
-### Customize configuration
+<hr>
+
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/Inserer-Pseudo" target="_blank">Author</a>
+</p>
+
+<br>
+
+## :dart: About ##
+
+Matos-Rent est LE logiciel de location de matériel informatique, sa simplicité permet à n'importe qui de l'utiliser. Garantie 0 prise de tête, il fera regretter n'importe quel administrateur de ne pas avoir sauté le pas plus tôt. Facile à installer et configurer alors n'hésitez plus, c'est le moment de se lancer !
+
+## :sparkles: Features ##
+
+:heavy_check_mark: Gestion du matériel informatique\
+:heavy_check_mark: Gestion des utilisateurs\
+:heavy_check_mark: Gestion des reservations\
+:heavy_check_mark: Interface intuitive et soignée
+
+## :rocket: Technologies ##
+
+Les technologies suivantes ont été utilisées :
+- [VueJS](https://vuejs.org/)
+- [Firebase](https://firebase.google.com/)
+- [Bulma](https://bulma.io/)
+- [Pinia](https://pinia.vuejs.org/)
+- [VueRouteur](https://router.vuejs.org/)
+- [Cypress](https://www.cypress.io/)
+
+## :white_check_mark: Requirements ##
+
+Avant de commencer :checkered_flag:, assurez-vous d'avoir :
+- [Git](https://git-scm.com)
+- Un environnement de developpement VueJS fonctionnel
+
+## :checkered_flag: Starting ##
+
+```bash
+# Cloner le projet
+
+# Initialiser le projet
+$ npm install
+
+# Compiler pour le developpement (rafraichissment à chaud)
+$ npm run serve
+
+# Compiler et réduire pour le déploiemennt
+$ npm run build
+
+# Lints et correction de fichiers
+$ npm run lint
+
+# Customiser la configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+
+
+## :memo: License ##
+
+Ce projet est sous licence POLYTECH. Pour plus d'infos, voir : [LICENSE](LICENSE.md)
+
+
+Fait avec :heart: par <a href="https://github.com/Inserer-Pseudo" target="_blank">Thibaut & Mathis & Benjamin & Maël</a>
+&#xa0;
+
+<a href="#top">Retour en haut</a>
+
+
