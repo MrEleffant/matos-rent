@@ -19,6 +19,7 @@
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#key-test-credentials">Test Credentials</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
   <a href="https://github.com/Inserer-Pseudo" target="_blank">Authors</a>
@@ -54,6 +55,17 @@ Avant de commencer :checkered_flag:, assurez-vous d'avoir :
 - [Git](https://git-scm.com)
 - Un environnement de developpement VueJS fonctionnel
 
+## :key: Test Credentials ##
+
+Utilisez les identifiants suivants pour tester le site :
+### Admin :
+- **Email** : mathi@gmail.com
+- **Mot de passe** : tititutu
+
+### User :
+- **Email** : test@gmail.com
+- **Mot de passe** : ceciestunmdp
+
 ## :checkered_flag: Starting ##
 
 ```bash
@@ -72,8 +84,6 @@ $ npm run lint
 # Lancer les tests automatisés
 $ npm run serve & npx cypress open
 
-# Customiser la configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 
 
